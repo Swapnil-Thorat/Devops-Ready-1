@@ -8,6 +8,7 @@ RUN unzip bonativo.zip
 RUN rm -rf bonativo.zip &&\
     cp -rf bonativo/* . &&\
     rm -rf bonativo &&\
-    touch hello
+    mkdir /var/www/html/secure &&\
+    touch /var/www/html/secure/gaurav.txt
 EXPOSE 80
 CMD ["/usr/sbin/httpd", "-D", "FOREGROUND"]
